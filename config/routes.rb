@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'destinations' => 'destination#index'
+
+  get 'show' => 'destination#show'
+
+  get 'destination/edit'
+
+  get 'destination/new'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

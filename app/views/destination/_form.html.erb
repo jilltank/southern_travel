@@ -1,0 +1,11 @@
+<%= form_tag(destinations_path) do %>
+	<%= text_field :name, placeholder: "Location name" %>
+	<%= text_field :description, placeholder: "description" %>
+	<%= text_field :address, placeholder: "address" %>
+	<%= text_field :city, placeholder: "city" %>
+	<%= select_tag :state, options_for_select(@states), :prompt => "Select a State" %>
+	<%= text_field :distance, placeholder: "How many hours from Atlanta?" %>
+	<%= select_tag :theme, options_for_select(@themes), :prompt => "Adventure or relax?" %>
+	<%= select_tag :cost, options_for_select(@cost), :prompt => "Choose a price range" %>
+	<%= submit_tag "submit" %>
+<% end %>
